@@ -38,9 +38,7 @@ const ExpenseForm = (props) => {
     //   enteredDate: event.target.value,
     // });
   };
-  const cancelHanlder = () => {
-    props.onCancel(false);
-  }
+
   const submitHandler = (event) => {
     event.preventDefault();
 
@@ -89,7 +87,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button onClick={cancelHanlder}>Cancel</button>
+        <button type="button" onClick={props.onCancel}>Cancel</button>
         <button type='submit'>Add Expense</button>
       </div>
     </form>
